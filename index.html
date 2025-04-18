@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inventory App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Inventory Entry</h1>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Scan or search part number, description, or category">
+    <button onclick="handleSearch()">Search</button>
+  </div>
+
+  <div id="itemDisplay" class="card"></div>
+
+  <div class="add-section" style="display: none;">
+    <label>Quantity:</label>
+    <input type="number" id="quantityInput" min="1">
+    <button onclick="addItem()">Add to List</button>
+  </div>
+
+  <h2>Added Items</h2>
+  <ul id="itemList"></ul>
+
+  <button onclick="submitList()">Submit</button>
+
+  <script src="app.js"></script>
+</body>
+</html>
